@@ -5,7 +5,7 @@
 // Login   <miele_t@epitech.net>
 // 
 // Started on  Sun Oct  7 12:54:45 2012 thomas miele
-// Last update Sun Oct 21 22:14:20 2012 thomas miele
+// Last update Wed Oct 31 13:55:11 2012 thomas miele
 //
 
 #include "header/RSphere.hpp"
@@ -13,11 +13,20 @@
 using namespace std;
 
 // ### CONSTRUCTOR ###
-RSphere::RSphere(qreal radius) : RObject(), m_radius(radius) {}
+RSphere::RSphere(qreal radius) : RObject(), m_radius(radius)
+{
+  m_transform.chmod(true, false, true);
+}
 
-RSphere::RSphere(QVector3D position, qreal radius) : RObject(position), m_radius(radius) {}
+RSphere::RSphere(QVector3D position, qreal radius) : RObject(position), m_radius(radius)
+{
+  m_transform.chmod(true, false, true);
+}
 
-RSphere::RSphere(qreal x, qreal y, qreal z, qreal radius) : RObject(x, y, z), m_radius(radius) {}
+RSphere::RSphere(qreal x, qreal y, qreal z, qreal radius) : RObject(x, y, z), m_radius(radius)
+{
+  m_transform.chmod(true, false, true);
+}
 
 RSphere::~RSphere() {}
 
@@ -34,8 +43,14 @@ void RSphere::setRadius(qreal radius) {m_radius = radius;}
 // ### FOO ###
 bool RSphere::intersection(Ray& ray)
 {
-  QVector3D pos = ray.position();
-  QVector3D dir = ray.direction();
+  Ray ray_tmp(ray);
+  if (m_transform.canTranslate())
+    {
+      QVector3D pos_real(m_position + m_transform.translation());
+      ray_tmp.setPosition(ray_tmp.position() - pos_real);
+    }
+  QVector3D pos = ray_tmp.position();
+  QVector3D dir = ray_tmp.direction();
   qreal k(0), k1(0), k2(0);
   qreal a(0), b(0), c(0);
   qreal delta(0);

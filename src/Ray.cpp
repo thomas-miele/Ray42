@@ -5,7 +5,7 @@
 // Login   <miele_t@epitech.net>
 // 
 // Started on  Sat Oct  6 17:50:20 2012 thomas miele
-// Last update Sun Oct 21 22:13:15 2012 thomas miele
+// Last update Tue Oct 23 20:08:47 2012 thomas miele
 //
 
 #include "header/Ray.hpp"
@@ -53,4 +53,18 @@ void Ray::setIndex(uint index)
 void Ray::setPoint(QVector3D point)
 {
   m_point = point;
+}
+
+// FOO
+void Ray::pointIntersection()
+{
+  qreal x(0), y(0), z(0);
+  
+  x = m_k * m_direction.x() + m_position.x();
+  y = m_k * m_direction.y() + m_position.y();
+  z = m_k * m_direction.z() + m_position.z();
+  
+  m_point.setX(x);
+  m_point.setY(y);
+  m_point.setZ(z);
 }

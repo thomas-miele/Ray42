@@ -5,7 +5,7 @@
 // Login   <miele_t@epitech.net>
 // 
 // Started on  Sat Oct  6 17:47:57 2012 thomas miele
-// Last update Sun Oct 21 20:17:42 2012 thomas miele
+// Last update Tue Oct 23 20:04:09 2012 thomas miele
 //
 
 #ifndef	RAY_HEADER
@@ -33,6 +33,8 @@ public:
   void setColor(uint color);
   void setIndex(uint index);
   void setPoint(QVector3D point);
+  // FOO
+  void pointIntersection();
 private:
   QVector3D m_position;
   QVector3D m_direction;
