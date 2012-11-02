@@ -5,41 +5,32 @@
 // Login   <miele_t@epitech.net>
 // 
 // Started on  Wed Oct 24 21:52:51 2012 thomas miele
-// Last update Wed Oct 31 14:08:58 2012 thomas miele
+// Last update Fri Nov  2 17:49:01 2012 thomas miele
 //
 
 #ifndef R_TRANSFORM_HEADER
 #define R_TRANSFORM_HEADER
 
-#include <cmath>
+#include <utility>
 #include <QVector3D>
+
+typedef std::pair<bool, QVector3D> PairTransform;
 
 class RTransform
 {
 public:
-  RTransform(bool canTransate = true, bool canRotate = false, bool canScale = false);
+  RTransform(PairTransform transform);
+  RTransform(bool mod, QVector3D value = QVector3D(0, 0, 0));
   // GET
-  QVector3D translation() const;
-  QVector3D rotation() const;
-  QVector3D scale() const;
-
-  bool canTranslate() const;
-  bool canRotate() const;
-  bool canScale() const;
+  PairTransform transform() const;
+  bool mod() const;
+  QVector3D value() const;
   // SET
-  void chmod(bool canTranslate, bool canRotate, bool canScale);
-
-  bool setTranslation(QVector3D translation);
-  bool setRotation(QVector3D rotation);
-  bool setScale(QVector3D scale);
+  void setTransform(PairTransform transform);
+  void chmod(bool chmod);
+  bool setValue(QVector3D value);
 private:
-  QVector3D m_translation;
-  QVector3D m_rotation;
-  QVector3D m_scale;
-
-  bool m_canTranslate;
-  bool m_canRotate;
-  bool m_canScale;
+  PairTransform m_transform;
 };
 
 #endif  // !R_TRANSFORM_HEADER
