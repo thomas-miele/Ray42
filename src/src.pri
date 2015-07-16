@@ -1,19 +1,19 @@
 INCLUDEPATH += $$PWD $$PWD/header
 
 HEADERS += \
-           $$PWD/header/QtInclude.hpp \
-           $$PWD/header/Ray.hpp \
-           $$PWD/header/RayEngine.hpp \
-           $$PWD/header/RayInclude.hpp \
-           $$PWD/header/RayStream.hpp \
-           $$PWD/header/RCamera.hpp \
-           $$PWD/header/RCylinder.hpp \
-           $$PWD/header/RListItem.hpp \
-           $$PWD/header/RObject.hpp \
-           $$PWD/header/RPlane.hpp \
-           $$PWD/header/RScene.hpp \
-           $$PWD/header/RSphere.hpp \
-           $$PWD/header/RTransform.hpp
+           $$PWD/QtInclude.hpp \
+           $$PWD/Ray.hpp \
+           $$PWD/RayEngine.hpp \
+           $$PWD/RayInclude.hpp \
+           $$PWD/RayStream.hpp \
+           $$PWD/RCamera.hpp \
+           $$PWD/RCylinder.hpp \
+           $$PWD/RListItem.hpp \
+           $$PWD/RObject.hpp \
+           $$PWD/RPlane.hpp \
+           $$PWD/RScene.hpp \
+           $$PWD/RSphere.hpp \
+           $$PWD/RTransform.hpp
 
 SOURCES += \
            $$PWD/main.cpp \
