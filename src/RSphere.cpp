@@ -1,14 +1,14 @@
 //
 // RSphere.cpp for Ray42 in /home/miele_t//Desktop/Ray42/src
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Sun Oct  7 12:54:45 2012 thomas miele
 // Last update Fri Nov  2 17:47:54 2012 thomas miele
 //
 
-#include "header/RSphere.hpp"
+#include "RSphere.hpp"
 
 using namespace std;
 
@@ -71,15 +71,15 @@ bool RSphere::intersection(Ray& ray)
       k1 = (- b - sqrt(delta)) / (2 * a);
       k2 = (- b + sqrt(delta)) / (2 * a);
       if (k1 <= k2)
-	k = k1;
+    k = k1;
       else if (k2 <= k1)
-	k = k2;
+    k = k2;
       if (k > 0)
-	{
-	  ray.setK(k);
-	  ray.setColor(m_color);
-	  return true;
-	}
+    {
+      ray.setK(k);
+      ray.setColor(m_color);
+      return true;
+    }
     }
   return false;
 }

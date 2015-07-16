@@ -1,14 +1,14 @@
 //
 // RayEngine.cpp for Ray42 in /home/miele_t//GitHub/Ray42/src
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Fri Nov  2 18:00:21 2012 thomas miele
 // Last update Fri Nov  2 18:07:08 2012 thomas miele
 //
 
-#include "header/RayEngine.hpp"
+#include "RayEngine.hpp"
 
 uint RayEngine::calc(Ray& ray, std::vector<RObject*>& scene)
 {

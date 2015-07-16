@@ -1,14 +1,14 @@
 //
 // RCylinder.cpp for Ray42 in /home/miele_t//Desktop/Ray42/src
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Thu Oct 11 23:14:53 2012 thomas miele
 // Last update Fri Nov  2 17:46:11 2012 thomas miele
 //
 
-#include "header/RCylinder.hpp"
+#include "RCylinder.hpp"
 
 using namespace std;
 
@@ -71,15 +71,15 @@ bool RCylinder::intersection(Ray& ray)
       k1 = (- b - sqrt(delta)) / (2 * a);
       k2 = (- b + sqrt(delta)) / (2 * a);
       if (k1 <= k2)
-	k = k1;
+    k = k1;
       else if (k2 <= k1)
-	k = k2;
+    k = k2;
       if (k > 0)
-	{
-	  ray.setK(k);
-	  ray.setColor(m_color);
-	  return true;
-	}
+    {
+      ray.setK(k);
+      ray.setColor(m_color);
+      return true;
+    }
     }
   return false;
 }

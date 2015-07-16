@@ -1,14 +1,14 @@
 //
 // RTransform.cpp for Ray42 in /home/miele_t//GitHub/Ray42/src
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Wed Oct 24 22:51:50 2012 thomas miele
 // Last update Fri Nov  2 17:49:31 2012 thomas miele
 //
 
-#include "header/RTransform.hpp"
+#include "RTransform.hpp"
 
 RTransform::RTransform(PairTransform transform) : m_transform(transform)
 {}

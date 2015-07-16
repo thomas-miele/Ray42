@@ -1,14 +1,14 @@
 //
 // RObject.cpp for Ray42 in /home/miele_t//Desktop/Ray42
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Sat Oct  6 22:48:35 2012 thomas miele
 // Last update Fri Nov  2 17:47:04 2012 thomas miele
 //
 
-#include "header/RObject.hpp"
+#include "RObject.hpp"
 
 RObject::RObject() : m_position(0, 0, 0), m_translation(true), m_rotation(false), m_scale(false), m_color(0xff000000) {}
 
@@ -55,26 +55,26 @@ bool RObject::setTransformValue(TransformType type, QVector3D value)
   if (type == TRANSLATE)
     {
       if (m_translation.mod())
-	{
-	  m_translation.setValue(value);
-	  return true;
-	}
+    {
+      m_translation.setValue(value);
+      return true;
+    }
     }
   else if (type == ROTATE)
     {
       if (m_rotation.mod())
-	{
-	  m_rotation.setValue(value);
-	  return true;
-	}
+    {
+      m_rotation.setValue(value);
+      return true;
+    }
     }
   else if (type == SCALE)
     {
       if (m_scale.mod())
-	{
-	  m_scale.setValue(value);
-	  return true;
-	}
+    {
+      m_scale.setValue(value);
+      return true;
+    }
     }
   return false;
 }

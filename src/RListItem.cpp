@@ -1,14 +1,14 @@
 //
 // RListItem.cpp for Ray42 in /home/miele_t//GitHub/Ray42/src
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Thu Nov  1 17:45:49 2012 thomas miele
 // Last update Thu Nov  1 18:24:55 2012 thomas miele
 //
 
-#include "header/RListItem.hpp"
+#include "RListItem.hpp"
 
 using namespace std;
 

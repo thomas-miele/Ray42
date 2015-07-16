@@ -1,14 +1,14 @@
 //
 // RayStream.cpp for Ray42 in /home/miele_t//Desktop/Ray42
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Wed Oct  3 20:31:52 2012 thomas miele
 // Last update Sun Oct 21 22:13:27 2012 thomas miele
 //
 
-#include "header/RayStream.hpp"
+#include "RayStream.hpp"
 
 // ### CONSTRUCTORS ###
 RayStream::RayStream() : m_name("untiled"), m_path(), m_image(), m_pixmap(), m_label("none")

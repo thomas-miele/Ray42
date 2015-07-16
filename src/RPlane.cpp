@@ -1,14 +1,14 @@
 //
 // RPlane.cpp for Ray42 in /home/miele_t//Desktop/Ray42/src
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Mon Oct  8 22:21:23 2012 thomas miele
 // Last update Fri Nov  2 17:47:29 2012 thomas miele
 //
 
-#include "header/RPlane.hpp"
+#include "RPlane.hpp"
 
 using namespace std;
 
@@ -87,11 +87,11 @@ bool RPlane::intersection(Ray& ray)
       num = m_distance - QVector3D::dotProduct(m_normal, pos);
       k = num / den;
       if (k > 0)
-	{
-	  ray.setK(k);
-	  ray.setColor(m_color);
-	  return true;
-	}
+    {
+      ray.setK(k);
+      ray.setColor(m_color);
+      return true;
+    }
     }
   return false;
 }

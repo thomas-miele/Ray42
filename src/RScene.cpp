@@ -1,14 +1,14 @@
 //
 // RScene.cpp for Ray42 in /home/miele_t//GitHub/Ray42/src
-// 
+//
 // Made by thomas miele
 // Login   <miele_t@epitech.net>
-// 
+//
 // Started on  Thu Nov  1 17:25:35 2012 thomas miele
 // Last update Fri Nov  2 18:09:22 2012 thomas miele
 //
 
-#include "header/RScene.hpp"
+#include "RScene.hpp"
 
 using namespace std;
 
